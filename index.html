@@ -9,6 +9,7 @@
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="icon" href="images/logo.png">
 	<title>Визитка Талеха</title>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 <body>
 
@@ -37,7 +38,7 @@
                 <a class="nav__link" href="#">Обо мне</a>
                 <a class="nav__link" href="#">Блог</a>
                 <a class="nav__link" href="#">Контакт</a>
-                <a class="nav__link nav__link--btn" href="#">Связаться со мной</a>
+                <a class="nav__link nav__link--btn" href="#" data-modal="#modal_hire_me">Связаться со мной</a>
             </nav>
             
         </div>
@@ -56,22 +57,22 @@
                  <div class="intro__text">Программист(Junior)</div>
                  
                  <div class="social">
-                     <a class="social_link" href="#">
+                     <a class="social_link" href="https://vk.com//id414834213">
                          <img src="images/vk.png" alt="" >
                      </a>
-                     <a class="social_link" href="#">
+                     <a class="social_link" href="https://www.instagram.com/invites/contact/?i=1kejdicohudwl&utm_content=11410ta">
                          <img src="images/instagram.png" alt="" >
                      </a>
-                     <a class="social_link" href="#">
+                     <a class="social_link" href="https://t.me/talex20011">
                          <img src="images/telegram.png" alt="" >
                      </a>
-                     <a class="social_link" href="#">
+                     <a class="social_link" href="http://taleh.watsap.me">
                          <img src="images/whatsapp.png" alt="" >
                      </a> 
                  </div>
                  
-                 <a class="btn" href="#">Связаться со мной</a>
-                 <button class="btn" type="button">Посмотреть резюме</button>
+                 <a class="btn" href="#" data-modal="#modal_hire_me">Связаться со мной</a>
+                 <button class="btn" type="button" data-modal="#modal_resume">Посмотреть резюме</button>
                  
              </div>
              <div class="intro__photo">
@@ -88,20 +89,20 @@
     <div class="container">
         
         <div class="works__nav">
-            <a class="works__nav-link" href="#">Все работы</a>
-            <a class="works__nav-link" href="#">Приложения</a>
-            <a class="works__nav-link" href="#">Веб-сайты</a>
-            <a class="works__nav-link" href="#">Взаимодействия</a>
+            <a class="works__nav-link" href="#" data-filter="all">Все работы</a>
+            <a class="works__nav-link" href="#" data-filter="app">Приложения</a>
+            <a class="works__nav-link" href="#" data-filter="website">Веб-сайты</a>
+            <a class="works__nav-link" href="#" data-filter="interaction">Взаимодействия</a>
         </div>
         
-        <div class="portfolio">
-            <div class="portfolio__col">
+        <div class="portfolio" >
+            <div class="portfolio__col" data-cat="app">
                
-                <div class="work">
+                <div class="work" data-modal="#modal_project_1">
                     <img class="work__image" src="images/t.jpg" alt="">
                 
                 <div class="work__content">
-                   <div class="work__cat">category</div> 
+                   <div class="work__cat">Категория: приложения</div> 
                    <div class="work__title">
                        Имя проекта
                        <time class="work__date" datetime="2019-11-22 19:00">2018</time>
@@ -110,13 +111,13 @@
                 </div>
             </div>
             
-                        <div class="portfolio__col">
+                        <div class="portfolio__col" data-cat="website">
                
                 <div class="work">
                     <img class="work__image" src="images/t.jpg" alt="">
                 
                 <div class="work__content">
-                   <div class="work__cat">category</div> 
+                   <div class="work__cat">Категория: сайт</div> 
                    <div class="work__title">
                        Имя проекта
                        <time class="work__date" datetime="2019-11-22 19:00">2018</time>
@@ -126,13 +127,13 @@
             </div>
 
        
-                   <div class="portfolio__col">
+                   <div class="portfolio__col" data-cat="interaction">
                
                 <div class="work">
                     <img class="work__image" src="images/t.jpg" alt="">
                 
                 <div class="work__content">
-                   <div class="work__cat">category</div> 
+                   <div class="work__cat">Категория: интерактив</div> 
                    <div class="work__title">
                        Имя проекта
                        <time class="work__date" datetime="2019-11-22 19:00">2018</time>
@@ -142,13 +143,13 @@
             </div>
 
        
-                   <div class="portfolio__col">
+                   <div class="portfolio__col" data-cat="website">
                
                 <div class="work">
                     <img class="work__image" src="images/t.jpg" alt="">
                 
                 <div class="work__content">
-                   <div class="work__cat">category</div> 
+                   <div class="work__cat">Категория: сайт</div> 
                    <div class="work__title">
                        Имя проекта
                        <time class="work__date" datetime="2019-11-22 19:00">2018</time>
@@ -158,13 +159,13 @@
             </div>
 
        
-                   <div class="portfolio__col">
+                   <div class="portfolio__col" data-cat="interaction">
                
                 <div class="work">
                     <img class="work__image" src="images/t.jpg" alt="">
                 
                 <div class="work__content">
-                   <div class="work__cat">category</div> 
+                   <div class="work__cat">Категория: интерактив</div> 
                    <div class="work__title">
                        Имя проекта
                        <time class="work__date" datetime="2019-11-22 19:00">2018</time>
@@ -174,13 +175,13 @@
             </div>
 
        
-                   <div class="portfolio__col">
+                   <div class="portfolio__col" data-cat="app">
                
                 <div class="work">
                     <img class="work__image" src="images/t.jpg" alt="">
                 
                 <div class="work__content">
-                   <div class="work__cat">category</div> 
+                   <div class="work__cat">Категория: приложения</div> 
                    <div class="work__title">
                        Имя проекта
                        <time class="work__date" datetime="2019-11-22 19:00">2018</time>
@@ -216,8 +217,8 @@
                 <div class="about__text"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus, provident, unde rem eveniet nisi eligendi consequatur adipisci id aperiam, exercitationem magnam sapiente nobis quibusdam ea quisquam fuga laboriosam porro corrupti!</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus, provident, unde rem eveniet nisi eligendi consequatur adipisci id aperiam, exercitationem magnam sapiente nobis quibusdam ea quisquam fuga laboriosam porro corrupti!</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus, provident, unde rem eveniet nisi eligendi consequatur adipisci id aperiam, exercitationem magnam sapiente nobis quibusdam ea quisquam fuga laboriosam porro corrupti!</p>
                 </div>
                 
-                 <a class="btn" href="#">Связаться со мной</a>
-                 <button class="btn" type="button">Посмотреть резюме</button>
+                 <a class="btn" href="#" data-modal="#modal_hire_me">Связаться со мной</a>
+                 <button class="btn" type="button" data-modal="#modal_resume">Посмотреть резюме</button>
             </div>
         </div>
         
@@ -328,6 +329,303 @@
 </section>
 
 
+<!-- /.footer -->
+<footer class="footer">
+   <div class="container">
+       
+       <div class="footer__inner">
+           <div class="footer__credits">
+               <div class="footer__copyright">
+                   &copy; 2022 Taleh Ahmedov
+               </div>
+               
+               <div class="footer__social">
+                   <a href="https://vk.com//id414834213" target="_blank">
+                       <img src="images/vk-grey.svg" width="24" alt="">
+                   </a>
+                   <a href="https://www.instagram.com/invites/contact/?i=1kejdicohudwl&utm_content=11410ta" target="_blank">
+                       <img src="images/instagram-grey.svg" width="24" alt="">
+                   </a>
+                   <a href="https://t.me/talex20011" target="_blank">
+                       <img src="images/telegram-grey.svg" width="24" alt="">
+                   </a>
+                   <a href="http://taleh.watsap.me" target="_blank">
+                       <img src="images/whatsapp-grey.svg" width="24" alt="">
+                   </a>
+               </div>
+               
+           </div>
+           
+           <nav class="footer__nav">
+               <a class="footer__nav-link" href="#">Мои работы</a>
+               <a class="footer__nav-link" href="#">Обо мне</a>
+               <a class="footer__nav-link" href="#">Блог</a>
+               <a class="footer__nav-link" href="#">Контакт</a>
+               <a class="footer__nav-link footer__nav-link--btn" href="#" data-modal="#modal_hire_me">Связаться со мной</a>
+           </nav>
+       </div>
+       
+       
+   </div>
+    
+</footer>
+
+
+<!-- /.modals -->
+<div class="modal" id="modal_project_1">
+    <div class="modal__dialog">
+      
+      <button class="modal__close" type="button" data_close>
+          <img src="images/cancel.svg" width="34" alt="Close">
+      </button>
+       
+       
+       <div class="modal-work">
+           <div class="modal-work__preview">
+               <img class="modal-work__photo" src="https://via.placeholder.com/790x780" alt="">
+           </div>
+           <div class="modal-work__content">
+             
+             
+              <div class="modal-work__header">
+                   <h3 class="modal-work__title">Название проекта</h3>
+                   <div class="modal-work__info">
+                       Категория <span class="modal-work__info-divitor">|</span> 2018
+                   </div>
+              </div>
+              
+              <div class="modal-work__client">
+                  <div class="modal-work__client-title">Клиент:</div>
+                  <div class="modal-work__client-compony">Креативный клиент</div>
+              </div>
+              
+              <div class="modal-work__text">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta odit nesciunt voluptatibus quaerat sequi tempore culpa, officia temporibus maiores alias ullam voluptatum unde ipsum quae quia nulla recusandae soluta animi.</p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta odit nesciunt voluptatibus quaerat sequi tempore culpa, officia temporibus maiores alias ullam voluptatum unde ipsum quae quia nulla recusandae soluta animi.</p>
+              </div>
+              
+              <div class="modal-work__footer">
+                  <button class="modal-work__btn modal-work__btn--prev">
+                  <img src="images/back.svg" height="12" alt="">
+                  Назад
+                  </button>
+                  <button class="modal-work__btn modal-work__btn--next">
+                  Вперед
+                  <img src="images/next.svg" height="11" alt="">
+                  </button>
+              </div>
+              
+           </div><!--modal-work__content-->
+       </div><!-- /.modal-work -->
+       
+        
+    </div><!-- /.modal__dialog -->
+</div><!-- /.modal -->
+
+
+
+<div class="modal" id="modal_resume">
+    <div class="modal__dialog">
+      
+      <button class="modal__close" type="button" data_close>
+          <img src="images/cancel.svg" width="34" alt="Close">
+      </button>
+       <div class="modal__content">
+           <h3 class="modal__title text-center">Резюме</h3>
+           
+       <div class="text-center">
+           <a class="btn btn--thin" href="#">Скачать PDF</a>
+           <a class="btn btn--thin" href="#">Распечатать</a>
+       </div>
+       
+       <div class="timeline">
+           
+           <div class="timeline__col timeline__col--left">
+               <h4 class="timeline__title">
+                   Опыт
+               </h4>
+               
+               <div class="timeline__item">
+                   <time class="timeline__date" datetime="06-04-2022">2022</time>
+                   <h5 class="timeline__subtitle">Фрилансер</h5>
+                   <div class="timeline__position">Верстальщик</div>
+                   <div class="timeline__text">
+                       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem non sed, veritatis itaque aspernatur voluptate dolores culpa perferendis eveniet quia officiis laudantium illo accusamus, doloremque at temporibus velit possimus aliquid.</p>
+                   </div>
+               </div>
+               
+               <div class="timeline__item">
+                   <time class="timeline__date" datetime="06-04-2022">2019 - 2022</time>
+                   <h5 class="timeline__subtitle">Сотрудник "Фикс Прайс"</h5>
+                   <div class="timeline__position">Администратор</div>
+                   <div class="timeline__text">
+                       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem non sed, veritatis itaque aspernatur voluptate dolores culpa perferendis eveniet quia officiis laudantium illo accusamus, doloremque at temporibus velit possimus aliquid.</p>
+                   </div>
+               </div>
+               
+               <div class="timeline__item">
+                   <time class="timeline__date" datetime="06-04-2022">2018</time>
+                   <h5 class="timeline__subtitle">Сотрудник "Макдональдс"</h5>
+                   <div class="timeline__position">Повар</div>
+                   <div class="timeline__text">
+                       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem non sed, veritatis itaque aspernatur voluptate dolores culpa perferendis eveniet quia officiis laudantium illo accusamus, doloremque at temporibus velit possimus aliquid.</p>
+                   </div>
+               </div>
+               
+           </div>
+           <div class="timeline__col timeline__col--right">
+               <h4 class="timeline__title">
+                   Навык
+               </h4>
+               
+               <div class="timeline__item">
+                   <time class="timeline__date" datetime="06-04-2022">2022</time>
+                   <h5 class="timeline__subtitle">HTML5 ,CSS3, LESS</h5>
+                   <div class="timeline__position">Самоучка</div>
+                   
+               </div>
+               
+               <div class="timeline__item">
+                   <time class="timeline__date" datetime="06-04-2022">2021</time>
+                   <h5 class="timeline__subtitle">Kotlin(Android Studio)</h5>
+                   <div class="timeline__position">Самоучка</div>
+                   
+               </div>
+               
+               <h4 class="timeline__title">
+                   Умения
+               </h4>
+               
+               <div class="progress-bar">
+                  <div class="progress-bar__item">
+                   <div class="progress-bar__left">
+                       <div class="progress-bar__title">HTML5</div>
+                   </div>
+                   <div class="progress-bar__right">
+                       <div class="progress-bar__bar">
+                           <div class="progress-bar__progress" style="width: 90%;"></div>
+                       </div>
+                   </div>
+                   </div>
+               </div>
+               
+               <div class="progress-bar">
+                  <div class="progress-bar__item">
+                   <div class="progress-bar__left">
+                       <div class="progress-bar__title">CSS3</div>
+                   </div>
+                   <div class="progress-bar__right">
+                       <div class="progress-bar__bar">
+                           <div class="progress-bar__progress" style="width: 70%;"></div>
+                       </div>
+                   </div>
+                   </div>
+               </div>
+               
+               <div class="progress-bar">
+                  <div class="progress-bar__item">
+                   <div class="progress-bar__left">
+                       <div class="progress-bar__title">LESS</div>
+                   </div>
+                   <div class="progress-bar__right">
+                       <div class="progress-bar__bar">
+                           <div class="progress-bar__progress" style="width: 50%;"></div>
+                       </div>
+                   </div>
+                   </div>
+               </div>
+               
+               <div class="progress-bar">
+                  <div class="progress-bar__item">
+                   <div class="progress-bar__left">
+                       <div class="progress-bar__title">KOTLIN</div>
+                   </div>
+                   <div class="progress-bar__right">
+                       <div class="progress-bar__bar">
+                           <div class="progress-bar__progress" style="width: 40%;"></div>
+                       </div>
+                   </div>
+                   </div>
+               </div>
+               
+           </div>
+           
+       </div><!-- /.timeline -->
+       
+       <div class="text-center">
+           <a class="btn" href="#">Связаться со мной</a>
+       </div>
+       
+       </div><!-- /.modal__content -->
+       
+
+       
+        
+    </div><!-- /.modal__dialog -->
+</div><!-- /.modal -->
+
+
+<div class="modal" id="modal_hire_me">
+    <div class="modal__dialog modal__dialog--sm ">
+      
+      <button class="modal__close" type="button" data_close>
+          <img src="images/cancel.svg" width="34" alt="Close">
+      </button>
+       
+           
+           
+       
+       <div class="contact">
+           <div class="contact__left">
+               <h3 class="modal__title modal__title--mb-0">Давай поговорим!</h3>
+               <h4 class="modal__subtitle">
+                   Позвони мне или отправь сообщение
+               </h4>
+               
+               <ul class="contact__info">
+                   <li class="contact__info-item">
+                      <img class="contact__info-icon" src="images/telephone.svg" width="15" alt="">
+                       8-(985)-952-48-98
+                   </li>
+                   <li  class="contact__info-item">
+                      <img class="contact__info-icon" src="images/email.svg" height="15" alt="">
+                       talex2001@list.ru
+                   </li>
+               </ul>
+               
+               
+               <form class="form" action="/" method="post">
+                  <div class="form__group">
+                       <label class="form__label" for="input__email">Почта:</label>
+                       <input type="text" name="input__email" class="form__input" id="input__email" placeholder="e-mail">
+                   </div>
+                   
+                   <div class="form__group">
+                       <label class="form__label" for="input__text">Сообщение</label>
+                       <textarea class="form__textarea" name="input__text" id="input__text" placeholder="Введи сообщение..."></textarea>
+                   </div>
+                   
+                   <div class="text-right w80">
+                       <button class="btn" type="submit">Отправить</button>
+                   </div>
+               </form>
+           </div><!-- /.contact__left -->
+           
+           <div class="contact__right"></div>
+       </div><!-- /.contact -->
+       
+       
+       
+       
+   
+       
+        
+    </div><!-- /.modal__dialog -->
+</div><!-- /.modal -->
+
+<!-- JS -->
+
+<script src="js/app.js"></script>
 	
 </body>
 </html>
