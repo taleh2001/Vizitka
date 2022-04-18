@@ -46,6 +46,7 @@ $(function(){
         });   
         }, 200);
         
+        $('#worksSlider').slick('setPosition');
         
       
     })
@@ -89,17 +90,87 @@ $(function(){
     $(".modal__dialog").on("click", function(event){
         event.stopPropagation();
         
-    })
+    }) 
     
+    /* vendor : https://kenwheeler.github.io/slick/
+    =========================================*/
     
+    $('[data-slider="slick"]').slick({
+          infinite: true,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          fade: true,
+          arrows: false, // убираем кнопки
+          dots: true // добавляем круглежки
+    });
     
+    $('.slickPrev').on("click", function(event){
+        event.preventDefault();
+        
+        let currentSlider = $(this).parents('.modal').find('[data-slider="slick"]');
+        
+        currentSlider.slick("slickPrev");
+    });
     
+    $('.slickNext').on("click", function(event){
+        event.preventDefault();
+        
+        let currentSlider = $(this).parents('.modal').find('[data-slider="slick"]');
+        
+        currentSlider.slick("slickNext");
+    });
     
+});
+
+
+$(document).ready(function(){// якорь работает. при нажатии на ссылку плавный переход
+
+  $("#nav").on("click","a", function (event) {
+
+      //отменяем стандартную обработку нажатия по ссылке
+
+      event.preventDefault();
+
+
+      //забираем идентификатор бока с атрибута href
+
+      var id  = $(this).attr('href'),
+
+
+      //узнаем высоту от начала страницы до блока на который ссылается якорь
+
+          top = $(id).offset().top;
+
+       
+
+      //анимируем переход на расстояние - top за 1500 мс
+
+      $('body,html').animate({scrollTop: top}, 1500);
+
+  });
     
-    
-    
-    
-    
-    
-    
+    $("#footer__nav").on("click","a", function (event) {
+
+      //отменяем стандартную обработку нажатия по ссылке
+
+      event.preventDefault();
+
+
+      //забираем идентификатор бока с атрибута href
+
+      var id  = $(this).attr('href'),
+
+
+      //узнаем высоту от начала страницы до блока на который ссылается якорь
+
+          top = $(id).offset().top;
+
+       
+
+      //анимируем переход на расстояние - top за 1500 мс
+
+      $('body,html').animate({scrollTop: top}, 1500);
+
+  });
+
 });
