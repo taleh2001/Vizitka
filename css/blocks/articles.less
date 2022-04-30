@@ -9,10 +9,38 @@
 .articles__col{
     width: 30.33333%;
     padding: 0 1rem;
+    
+//    @media @tablet{
+//        width: 40%;
+//    }
+//    @media @mobile{
+//        width: 99%;
+//    }
+    
+    @media @notebook-mini{
+        flex-basis: 29.3333%;
+    }
+    
+    @media @mobile-big{
+        flex-basis: 44%;
+    }
+    
+    @media @mobile{
+        flex-basis: 44%;
+    }
+    
+    @media @mobile-sm{
+        flex-basis: 100%;
+    }
 }
 
 .articles__item{
     margin-bottom: 2rem;
+    
+    @media @tablet{
+        max-width: 370px;
+        margin: 0 auto 2rem;
+    }
 }
 
 .articles__header{

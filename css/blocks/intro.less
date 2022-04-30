@@ -4,10 +4,17 @@
 .intro__inner{
     display: flex;
     border-bottom: 1px solid fade(@grey, 30%);
-    padding-top: 100px;
-    padding-bottom: 120px;
+    padding-top: 6.6rem;
+    padding-bottom: 8rem;
     position: relative;
 //    background: url("../images/ya1.jpg") right bottom no-repeat;
+    
+    @media @tablet{
+        padding-top: 3rem;
+        padding-bottom: 3rem; 
+        //padding-left: 150px;
+        width: 100%;
+    }
 }
 
 .intro__contant{
@@ -51,4 +58,8 @@
     border-radius: 40px 40px 0 0;
     box-shadow:  2px 2px 29px fade(@black, 80%);
     
+    @media @tablet{
+        display: none;
+        
+    }
 }

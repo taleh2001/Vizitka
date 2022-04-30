@@ -122,7 +122,7 @@ $(function(){
     
 });
 
-
+// Это плавный переход на якорь
 $(document).ready(function(){// якорь работает. при нажатии на ссылку плавный переход
 
   $("#nav").on("click","a", function (event) {
@@ -172,5 +172,19 @@ $(document).ready(function(){// якорь работает. при нажати
       $('body,html').animate({scrollTop: top}, 1500);
 
   });
+    
+    /* Мобильная навигация
+    =================================*/
+    
+    const navToggle = $("#navToggle");
+    const nav = $("#nav");
+    
+        navToggle.on("click", function(event){
+        event.preventDefault();
+            
+        nav.toggleClass("show");
+        
+        
+    });
 
 });
